@@ -48,6 +48,7 @@ export const singInValidationSchema = yup.object({
   password: yup
     .string()
     .min(8)
+    .max(64)
     .test((value) => hasUpperCase(value) && hasLowerCase(value))
     .test((value) => hasNumber(value)),
 });
